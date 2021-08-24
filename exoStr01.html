@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>ExoStr01</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var word = prompt("Veuillez saisir un mot..");
+        var char = prompt("Le caractère");
+        console.log("Le mot est :" + word + ' ' + "Le char est :" + char);
+
+        function findChar(word, char) {
+            var rang = 0;
+            var nbOccur = 0;
+            while (rang < word.length) {
+                if (char == word[rang]) {
+                    nbOccur = nbOccur + 1;
+                }
+                rang++;
+            }
+            if (nbOccur == 0) {
+                console.log("Le caractère n'est pas present ");
+            } else {
+                console.log("Le caractère est pas present ");
+            }
+        }
+
+        findChar(word, char);
+    </script>
+</body>
+
+</html>

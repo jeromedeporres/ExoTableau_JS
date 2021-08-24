@@ -1,0 +1,32 @@
+<!--Fonction inverseTab() : Cette fonction prend en paramètre une valeur n (correspondant à la
+taille du tableau) et un tableau initialisé par l’utilisateur. La fonction décrit une suite
+d’actions qui l’inverse sans utiliser de tableau intermédiaire.-->
+
+<html>
+
+<head>
+    <title>Exo04</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var newTab = new Array();
+        var nb = 6;
+        for (var i = 0; i < nb; i++) {
+            do {
+                newTab[i] = parseInt(prompt("Donner une valeur"));
+            } while (newTab[i] < 0);
+        }
+
+        function reverseArray(arr) {
+            var newArray = [];
+            for (var i = arr.length; i > 0; i--) {
+                newArray[i - 1] = arr[arr.length - i];
+            }
+            return newArray;
+        }
+        console.log(reverseArray(newTab));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!--Écrire une fonction exo01() dans laquelle vous déclarez et initialisez un tableau d’entiers
+« tab » avec des valeurs, dont certains seront nulles. Le programme doit parcourir le tableau
+et afficher les indices des éléments nuls du tableau.-->
+
+<html>
+
+<head>
+    <title>Exo01</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function exo01() {
+            var tab = ["Jan", "Fev", 0, "Avr", "Mai", 4, 0, 6, 0];
+            // var mois = tab.length;
+            for (var i = 0; i < tab.length; i++) {
+                if (tab[i] == 0) {
+                    console.log("L'indice avec valeur null : " + i);
+                }
+            }
+        }
+        exo01();
+    </script>
+</body>
+
+</html>

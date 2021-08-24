@@ -1,0 +1,40 @@
+<!--Soit un tableau ayant N éléments. Transférer les éléments positifs de T dans un tableau et
+les éléments négatifs de T dans un autre tableau.-->
+
+<html>
+
+<head>
+    <title>Exo04</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var T = [1, 2, 3, 4, 5, -1, -2, -3, -4, -5];
+        var POS = [];
+        var NEG = [];
+        console.log(T);
+
+        var nb = 0;
+        var nb2 = 0;
+
+        function arraySplit() {
+            for (var i = 0; i <= 11; i++) {
+                if (T[i] < 0) {
+                    NEG[nb] = T[i];
+                    nb++;
+
+                } else {
+                    POS[nb2] = T[i];
+                    nb2++;
+                }
+
+            }
+            console.log("Negatifs " + NEG);
+            console.log("Positifs " + POS);
+        }
+
+        arraySplit();
+    </script>
+</body>
+
+</html>

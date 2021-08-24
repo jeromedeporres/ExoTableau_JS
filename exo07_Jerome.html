@@ -1,0 +1,53 @@
+<!--Soit un tableau X de N entiers positifs. Déterminer :
+— l’ensemble des valeurs distinctes de X,
+— le nombre de valeurs distinctes de X,
+— l’ensemble des nombres d’occurrences (ou effectifs) de chacune des valeurs distinctes de
+X.-->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo07</title>
+</head>
+
+<body>
+    <div id="occurrence">
+        <h1>Exo07</h1>
+        <p>L’ensemble des nombres d’occurrences de chacune des valeurs distinctes de X.</p>
+    </div>
+    <script type="text/javascript">
+        var X = [1, 5, 1, 2, 2, 3, 2];
+        var count = 0;
+        for (var index = 0; index <= 5; index++) {
+
+
+            for (var i = 0; i < 7; i++) {
+                if (X[i] == index) {
+                    count = count + 1;
+                };
+            }
+            if (count != 0) {
+                document.getElementById("occurrence").innerHTML += "<p>" + index + " : " + count + "</p>";
+            };
+
+            count = 0;
+        }
+
+        var newTab = X.filter(getUniqueVal);
+
+        function getUniqueVal(value, index, self) {
+            return self.indexOf(value) === index;
+        }
+
+        document.write("Le Tableau : [" + X + "]</br>");
+        document.write("L’ensemble des valeurs distinctes de X : [" + newTab + "]</br>");
+        document.write("Le nombre de valeurs distinctes de X : [" + newTab.length + "]</br>");
+    </script>
+
+</body>
+
+</html>

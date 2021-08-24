@@ -1,0 +1,35 @@
+<!--2 - Écrire une fonction exo01bis() qui prend en paramètre un tableau (initialisé par
+l’utilisateur) et une valeur notée elt (saisie par l’utilisateur). Cette fonction vérifie si la valeur
+elt est présente dans le tableau. Un message est affiché si la valeur elt est présente dans le
+tableau (type : la valeur elt est présente dans le tableau).-->
+
+<html>
+
+<head>
+    <title>Exo01Bis</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function exo01Bis(tab, elt) {
+            for (var i = 0; i < tab.length; i++) {
+                if (tab[i] == elt) {
+                    console.log("la valeur elt est présente dans le tableau.");
+                }
+                return;
+            }
+        }
+        var tab = new Array();
+        var n = 3;
+        for (var i = 0; i < n; i++) {
+            do {
+                tab[i] = parseInt(prompt("Donner une valeur"));
+            } while (tab[i] < 0);
+        }
+        console.log(tab);
+        var elt = parseInt(prompt("Donner que vous souhaiter"));
+        exo01Bis(tab, elt)
+    </script>
+</body>
+
+</html>
